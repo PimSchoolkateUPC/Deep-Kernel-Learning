@@ -1,3 +1,4 @@
+import math
 
 class Value:
     """ stores a single scalar value and its gradient """
@@ -48,6 +49,15 @@ class Value:
         def _backward():
             self.grad += (out.data > 0) * out.grad
         out._backward = _backward
+
+        return out
+
+    def RFF(self, eps):
+        out = Value(math.cos(eps * self.data))
+
+        def _backward():
+            self.grad += (-eps * math.sin(eps * self.data)) * out.grad
+        self._backward = _backward
 
         return out
 
