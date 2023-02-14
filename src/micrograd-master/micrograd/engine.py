@@ -52,13 +52,12 @@ class Value:
 
         return out
 
-    def RFF(self, eps):
-        out = Value(math.cos(eps * self.data))
+    def cos(self):
+        out = Value(math.cos(self.data), (self, ), 'Cos')
 
         def _backward():
-            self.grad += (-eps * math.sin(eps * self.data)) * out.grad
-        self._backward = _backward
-
+            self.grad += -math.sin(self.data) * out.grad
+        out._backward = _backward
         return out
 
     def backward(self):
