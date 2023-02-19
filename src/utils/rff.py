@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 
+
 def sample_xi(nin, nout, sigma=1):
     """
     Generates a tensor of size (nout, nin) with values drawn from a normal distribution 
@@ -14,8 +15,7 @@ def sample_xi(nin, nout, sigma=1):
     Returns:
         torch.Tensor: Randomly generated tensor of size (nout, nin).
     """
-    return torch.randn((nout, nin)) * sigma
-
+    return torch.randn((nin, nout)) * sigma
 
 @torch.jit.script
 def RandomFourierFeatureMap(xi: torch.Tensor, x: torch.Tensor):
@@ -32,12 +32,12 @@ def RandomFourierFeatureMap(xi: torch.Tensor, x: torch.Tensor):
         torch.Tensor: Tensor of size (batch_size, nout) obtained by applying the random Fourier feature 
                       map to the input tensor x.
     """
-    assert xi.shape[1] == x.shape[1], "The second dimension of xi must match the second dimension of x."
-    z = torch.matmul(x, xi.t()) # Matrix multiplication between x and the transpose of xi
+    assert xi.shape[0] == x.shape[1], f"The second dimension of xi {xi.shape} must match the second dimension of x {x.shape}."
+    z = torch.matmul(x, xi) # Matrix multiplication between x and the transpose of xi
     return torch.cos(z) # Apply cosine function element-wise to the resulting matrix
 
-
 class RandomFourierFeatureLayer(nn.Module):
+
     """
     PyTorch module for generating random Fourier features.
 
@@ -56,7 +56,7 @@ class RandomFourierFeatureLayer(nn.Module):
             sigma (float, optional): Standard deviation of the normal distribution. Defaults to 1.
         """
         super().__init__()
-        self.register_buffer("xi", sample_xi(nin, nout, sigma))
+        self.xi = nn.Parameter(sample_xi(nin, nout, sigma), requires_grad=False)
 
     def forward(self, x):
         """
