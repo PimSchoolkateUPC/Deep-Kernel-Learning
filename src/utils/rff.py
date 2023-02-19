@@ -1,5 +1,6 @@
 import torch
 from torch import nn
+import math
 
 
 def sample_xi(nin, nout, sigma=1):
@@ -56,6 +57,7 @@ class RandomFourierFeatureLayer(nn.Module):
             sigma (float, optional): Standard deviation of the normal distribution. Defaults to 1.
         """
         super().__init__()
+        self.InvSqrtD = 1 / math.sqrt(nout)
         self.xi = nn.Parameter(sample_xi(nin, nout, sigma), requires_grad=False)
 
     def forward(self, x):
@@ -70,4 +72,4 @@ class RandomFourierFeatureLayer(nn.Module):
             torch.Tensor: Tensor of size (batch_size, nout) obtained by applying the random Fourier feature 
                           map to the input tensor x using the precomputed xi buffer.
         """
-        return RandomFourierFeatureMap(self.xi, x)
+        return self.InvSqrtD * RandomFourierFeatureMap(self.xi, x)
