@@ -37,4 +37,4 @@ In no particular order
 
 ## 03/05/2023
  - Added read and unread papers to repo + restructured repo
- - created reading strategy for unread papers
+ - Devised reading strategy for unread papers
