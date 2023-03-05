@@ -17,5 +17,5 @@ authors: Siamak Mehrkanoon, Johan A.K. Suykens
 
 1. **Learning Problem**: Classification (Binary and Multiclass)
 2. **Kernel method**: RBF kernel:
-$$K(x-y) = \int_{\mathbb{R}^d} p(\xi)e^{j\xi^T(x-y)}d\xi = \mathbb{E}_{\xi}[z_{\xi}(x)z_{\xi}(y)]$$
+$$K(x-y) = \int_{\mathbb{R}^d} p(\xi)e^{j\xi^T(x-y)}d\xi = \mathbb{E}_{\xi}(z_{\xi}(x)z_{\xi}(y))$$
 
