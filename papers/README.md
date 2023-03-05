@@ -12,4 +12,8 @@
 
 # Paper Comments
 
-##
+## Deep hybrid neural-kernel networks using random Fourier features
+authors: Siamak Mehrkanoon, Johan A.K. Suykens
+
+1. **Learning Problem**:
+
