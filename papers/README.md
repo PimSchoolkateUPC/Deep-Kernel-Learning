@@ -66,7 +66,7 @@ Implements a Gaussian Process on top of an already trained DNN. In the implement
    **Loss function** First squared loss. Then Marginal Likelihood of the GP.
    **Regularization term**: It is stated in the related work section that this is not needed in GP.
    
-4. Paper has not been implemented. It could potentially be added to the current framework, however, it would require building a framework for training GPs in PyTorch that can sit on top of the current implementation.
+4. Paper has not been implemented. It could potentially be added to the current framework, however, it would require building a framework for training GPs in PyTorch that can sit on top of the current implementation. IMPLEMENTATION CAN BE FOUND HERE: https://people.orie.cornell.edu/andrew/code/
 
 Possibly interesting to combine with layer-wise training to create actual infinte networks.
 
