@@ -69,6 +69,7 @@ Implements a Gaussian Process on top of an already trained DNN. In the implement
 4. Paper has not been implemented. It could potentially be added to the current framework, however, it would require building a framework for training GPs in PyTorch that can sit on top of the current implementation.
 
 Possibly interesting to combine with layer-wise training to create actual infinte networks.
+
 ------------------------------------
 
 
