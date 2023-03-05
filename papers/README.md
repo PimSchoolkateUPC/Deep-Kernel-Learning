@@ -22,9 +22,9 @@ authors: Siamak Mehrkanoon, Johan A.K. Suykens
    Feature map: RBF RFF
 
 3. **Describe how the model is trained**: Stochastic Gradient descent and back propagation.
-   Loss function (Cross entropy - For multiclass and Binary):
-   Regularization term: (L2 regularization)
-   Cost / Emperical risk / Optimization problem:
+   Loss function (Cross entropy - For multiclass and Binary).\n
+   Regularization term: (L2 regularization)\n
+   Cost / Emperical risk / Optimization problem\n
 
 4. **Paper has been implemented**
 
