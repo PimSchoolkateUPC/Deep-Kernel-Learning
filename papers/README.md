@@ -21,3 +21,24 @@ authors: Siamak Mehrkanoon, Johan A.K. Suykens
 ```math
 K(x-y) = \int_{\mathbb{R}^d} p(\xi)e^{j\xi^T(x-y)}d\xi = \mathbb{E}_{\xi} (z_{\xi}(x)z_{\xi}(y))
 ```
+Feature map (implemented):
+
+```math
+\hat{\varphi}(x) = \frac{1}{\sqrt{D}}\left[z_{\xi_1}(x),...,z_{\xi_D}(x)\right]^T
+```
+```math
+z_{\xi}(x) = cos(\xi^T x)
+```
+
+Feature map (Alternative):
+```math
+\hat{\varphi}(x) = \frac{1}{\sqrt{\lambda_i}}\sum^m_{k=1}u_{ki}K(x_k, x), \ i = 1,..., m
+```
+where $\lambda_i$ and $\u_i$ are eigenvalues and eigenvectors of kernel matrix $\Omega_{m\times m}$.
+
+3. **Describe how the model is trained**: Stochastic Gradient descent and back propagation.
+
+Loss function:
+```math
+
+```
