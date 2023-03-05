@@ -2,7 +2,7 @@
 This logbook is intented for evaluation of the TFM and progress tracking purposes.
 It was initiliazed on: 03/05/2023.
 
-### 01/02/2023 - 02/05/2023
+## 02/01/2023 - 03/05/2023
 In no particular order
 
  - Learnt PyTorch.
@@ -35,3 +35,6 @@ In no particular order
    - Relu Kernel [NO DOTPRODUCT]
    - LeakyRelu Kernel [NO DOTPRODUCT]
 
+## 03/05/2023
+ - Added read and unread papers to repo + restructured repo
+ - created reading strategy for unread papers
