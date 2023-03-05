@@ -10,7 +10,7 @@ In no particular order
    - Customizable layers
    - Customizable Loss functions
  
- - Implemented basic dataset loader for datasets used in "Deep hybrid neural-kernel networks using random Fourier features" compatible with PyTorch. This will serve a basic evaluation method for upcoming model designs. Adaptable for including more datasets. See src/utils/Dataloader.py (folder structure might be renamed later).
+ - Implemented basic dataset loader for datasets used in "Deep hybrid neural-kernel networks using random Fourier features" compatible with PyTorch. This will serve a basic evaluation method for upcoming model designs. Adaptable for including more datasets. See [src/utils/Dataloader.py](https://github.com/PimSchoolkateUPC/Deep-Kernel-Learning/blob/main/src/utils/dataloader.py) (folder structure might be renamed later).
 
  - Gathered related works on Google Scholar
 
