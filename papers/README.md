@@ -18,7 +18,7 @@
 authors: Siamak Mehrkanoon, Johan A.K. Suykens
 
 ### **Learning Problem**: Classification (Binary and Multiclass)
-###**Kernel method**: RBF kernel:
+### **Kernel method**: RBF kernel:
 
 ```math
 K(x-y) = \int_{\mathbb{R}^d} p(\xi)e^{j\xi^T(x-y)}d\xi = \mathbb{E}_{\xi} (z_{\xi}(x)z_{\xi}(y))
@@ -38,7 +38,7 @@ z_{\xi}(x) = cos(\xi^T x)
 ```
    where $\lambda_i$ and $u_i$ are eigenvalues and eigenvectors of kernel matrix $\Omega_{m\times m}$. Using this as an implementation would require to learn the kernel matrix $\Omega_{m \times m}$ which is **NOT** done in the paper.
 
-###**Describe how the model is trained**: Stochastic Gradient descent and back propagation.
+### **Describe how the model is trained**: Stochastic Gradient descent and back propagation.
 
 Loss function (Cross entropy - For multiclass and Binary):
 ```math
@@ -55,7 +55,7 @@ Cost / Emperical risk / Optimization problem:
 \underset{W_1, W_2, b_1, b_2}{\min} J(W_1, W_2, b_1, b_2) = \frac{\gamma}{2}\sum^2_{j=1}\mathrm{Tr}\left(W_jW_j^T\right) + \frac{1}{n}\sum^n_{i=1}L(x_i, y_i)
 ```
 
-###**Paper has been implemented**
+### **Paper has been implemented**
 
 ------------------------------------
 
