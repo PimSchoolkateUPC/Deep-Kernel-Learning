@@ -38,3 +38,5 @@ In no particular order
 ## 03/05/2023
  - Added read and unread papers to repo + restructured repo
  - Devised reading strategy for unread papers
+ - Applied Strategy to already read papers (see above)
+ - Implemented Spectral Mixture Kernel and feature map as defined by Deep Kernel Learning.
