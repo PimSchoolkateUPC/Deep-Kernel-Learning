@@ -15,5 +15,8 @@
 ## Deep hybrid neural-kernel networks using random Fourier features
 authors: Siamak Mehrkanoon, Johan A.K. Suykens
 
-1. **Learning Problem**:
+1. **Learning Problem**: Classification (Binary and Multiclass)
+2. **Kernel method**:
+
+$$This is an equation$$
 
